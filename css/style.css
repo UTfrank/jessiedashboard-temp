@@ -190,7 +190,9 @@ body {
 
 .sidebar__footer {
   color: #c4c4c4;
-  text-align: center;
+  margin-left: 15px;
+  padding: 10px;
+  margin-top: 100px;
 }
 
 .sidebar__footer-heading {
@@ -406,7 +408,7 @@ a.dashboard__nav-link.d-flex::after {
 
 .sub-heading {
   font-style: normal;
-  font-weight: 600;
+  font-weight: bold;
   font-size: 14px;
   line-height: 19px;
   margin-bottom: 13px;
@@ -1106,6 +1108,11 @@ div.balance-card__border:nth-child(2) > div:nth-child(1) {
   height: 300px;
 }
 
+.coin-card {
+  padding: 31px 5px;
+  box-shadow: unset;
+}
+
 .referral-card {
   border: 0.6px solid #adb5bd;
   border-radius: 8px;
@@ -1303,10 +1310,7 @@ div.col-md-12:nth-child(1)
     border: unset;
     background-color: none !important;
   }
-  .slick-prev,
-  .slick-next {
-    display: none !important;
-  }
+
   .ad-card {
     height: 130px;
   }
@@ -1812,6 +1816,13 @@ div.form-floating .form-control.disabled {
   font-size: 12px;
   line-height: 16px;
   color: #323232;
+}
+
+@media (max-width: 75em) {
+  .input-group-text {
+    padding: 16px 10px;
+    font-size: 11px;
+  }
 }
 
 /* form section end */
