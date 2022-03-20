@@ -219,7 +219,7 @@ body {
   .content {
     width: 100%;
     z-index: 1;
-    padding: 0 0px;
+    padding: 0 10px;
   }
   .content .container {
     padding: 0px;
@@ -933,7 +933,7 @@ a:hover {
 
 @media only screen and (max-width: 800px) {
   .balance-card {
-    padding: 15px;
+    padding: 20px 24px;
   }
 }
 
@@ -1178,9 +1178,58 @@ div.balance-card__border:nth-child(2) > div:nth-child(1) {
   background-color: #fff;
 }
 
+div.col-md-12:nth-child(1)
+  > div:nth-child(1)
+  > div:nth-child(1)
+  > div:nth-child(2) {
+  margin-top: 0px;
+}
+
+.responsive-slide .slick-slide {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
 @media (max-width: 37.5em) {
+  .balance-card.no-shadow {
+    padding: 10px;
+  }
   .balance-card__header {
+    margin-bottom: -10px;
+  }
+  .balance-card__header h5 {
+    margin-bottom: 20px;
+  }
+  /* .balance-card__header h6 {
+    width: 50%;
+  } */
+  .balance-card__header h6 {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 0;
+  }
+  .balance-card__header h6 span.amount {
+    display: block;
+    word-break: break-all;
+  }
+  .balance-card__header h6 button {
+    margin-left: 0 !important;
+    padding: 0 !important;
+  }
+  .balance-card__border:not(:last-child) {
+    margin-bottom: 10px;
+  }
+  .balance-card__border {
+    padding: 10px 5px;
+  }
+  .balance-card__dropdown {
+    display: none;
+  }
+  div.col-md-12:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(1)
+    > div:nth-child(2) {
+    margin-top: 44px;
   }
   div.balance-card__border:nth-child(1) > div:nth-child(2) > h5:nth-child(1),
   div.balance-card__border:nth-child(1) > div:nth-child(2) > p:nth-child(2),
@@ -1191,6 +1240,9 @@ div.balance-card__border:nth-child(2) > div:nth-child(1) {
   .balance-card__dropdown + .dropdown-menu.show p {
     font-size: 9px;
     line-height: 13px;
+  }
+  .balance-card__body a.btn {
+    font-size: 13px;
   }
   .table > thead:nth-child(1) {
     display: none;
@@ -1215,6 +1267,9 @@ div.balance-card__border:nth-child(2) > div:nth-child(1) {
   .slick-next {
     display: none !important;
   }
+  .ad-card {
+    height: 170px;
+  }
 }
 
 .btn:focus,
@@ -1222,7 +1277,12 @@ div.balance-card__border:nth-child(2) > div:nth-child(1) {
   box-shadow: unset;
 }
 .bg-primary {
-  background-color: #347af0 !important;
+  background-color: #1a8fdd !important;
+}
+
+.progress-bar {
+  background: linear-gradient(180deg, #016cba 0%, #1a8fdd 100%);
+  border-radius: 28px;
 }
 
 .upgrade-list {

@@ -270,94 +270,96 @@
         <div class="row justify-content-center">
           <div class="col-md-9">
             <div class="row align-items-center p-0 m-0">
-              <div class="col-12 col-md-12 col-lg-6">
-                <div class="col-12">
-                  <div class="card balance-card" style="background-image: url('images/footer-bg.jpg');">
-                    <div class="balance-card__header text-left">
-                      <h5 class="balance-card-title col-12">Available Balance:</h5>
-                      <h6 class="balance-card__amount col-12"><span class="amount">₦1,000,000.00</span>
-                        <button class="btn btn-hide-amt ms-5 text-white"><span
-                            class="mdi mdi-eye-outline"></span></button>
-                      </h6>
-                    </div>
-                    <div class="balance-card__body">
-
-                      <div class="col-12 d-flex justify-content-between" role="group" aria-label="Basic example">
-                        <a href="naira-wallet-deposit.html" class="btn bg-primary col text-white">
-                          <span class="mdi mdi-plus-circle-outline"></span>
-                          Deposit</a>
-                        <a href="naira-wallet-withdrawal.html" class="btn bg-primary col mx-1 text-white">
-                          <span class="mdi mdi-cash-multiple"></span>
-                          Withdraw</a>
+              <div class="col-12 responsive-slide">
+                <div class="col-12 col-md-12 col-lg-6">
+                  <div class="col-12">
+                    <div class="card balance-card" style="background-image: url('images/footer-bg.jpg');">
+                      <div class="balance-card__header text-left">
+                        <h5 class="balance-card-title col-12">Available Balance:</h5>
+                        <h6 class="balance-card__amount col-12"><span class="amount">₦1,000.00</span>
+                          <button class="btn btn-hide-amt ms-5 text-white"><span
+                              class="mdi mdi-eye-outline"></span></button>
+                        </h6>
                       </div>
-                    </div>
-                    <!-- <div class="balance-card__footer">
+                      <div class="balance-card__body">
+
+                        <div class="col-12 d-flex justify-content-between" role="group" aria-label="Basic example">
+                          <a href="naira-wallet-deposit.html" class="btn bg-primary col text-white">
+                            <span class="mdi mdi-plus-circle-outline"></span>
+                            Deposit</a>
+                          <a href="naira-wallet-withdrawal.html" class="btn bg-primary col mx-1 text-white">
+                            <span class="mdi mdi-cash-multiple"></span>
+                            Withdraw</a>
+                        </div>
+                      </div>
+                      <!-- <div class="balance-card__footer">
                       <h6></h6>
                       <p></p>
                     </div> -->
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="col-lg-6 col-md-12 col-12">
-                <div class="col-12 mt-3">
-                  <div class="card balance-card no-shadow border">
-                    <div class="balance-card__border">
-                      <div class="balance-card__header pb-3">
-                        <div class="progress col-12" style="height: 5px;">
-                          <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="col-lg-6 col-md-12 col-12">
+                  <div class="col-12">
+                    <div class="card balance-card no-shadow border">
+                      <div class="balance-card__border">
+                        <div class="balance-card__header pb-3">
+                          <div class="progress col-12" style="height: 5px;">
+                            <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                        <div class="balance-card__body d-flex justify-content-between align-content-center">
+                          <h5 class="balance-card-title text-black">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0 9H10V10H0V9ZM1 5H2V8.5H1V5ZM3.5 5H4.5V8.5H3.5V5ZM5.5 5H6.5V8.5H5.5V5ZM8 5H9V8.5H8V5ZM0 2.5L5 0L10 2.5V4.5H0V2.5ZM1 3.118V3.5H9V3.118L5 1.118L1 3.118ZM5 3C4.86739 3 4.74021 2.94732 4.64645 2.85355C4.55268 2.75979 4.5 2.63261 4.5 2.5C4.5 2.36739 4.55268 2.24021 4.64645 2.14645C4.74021 2.05268 4.86739 2 5 2C5.13261 2 5.25979 2.05268 5.35355 2.14645C5.44732 2.24021 5.5 2.36739 5.5 2.5C5.5 2.63261 5.44732 2.75979 5.35355 2.85355C5.25979 2.94732 5.13261 3 5 3Z"
+                                fill="#323232" />
+                            </svg>
+                            One time spend limit :
+                          </h5>
+                          <p class="balance-card__amount-sm text-black mb-0">₦0.00 / ₦1,000,000.00</p>
                         </div>
                       </div>
-                      <div class="balance-card__body d-flex justify-content-between align-content-center">
-                        <h5 class="balance-card-title text-black">
-                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M0 9H10V10H0V9ZM1 5H2V8.5H1V5ZM3.5 5H4.5V8.5H3.5V5ZM5.5 5H6.5V8.5H5.5V5ZM8 5H9V8.5H8V5ZM0 2.5L5 0L10 2.5V4.5H0V2.5ZM1 3.118V3.5H9V3.118L5 1.118L1 3.118ZM5 3C4.86739 3 4.74021 2.94732 4.64645 2.85355C4.55268 2.75979 4.5 2.63261 4.5 2.5C4.5 2.36739 4.55268 2.24021 4.64645 2.14645C4.74021 2.05268 4.86739 2 5 2C5.13261 2 5.25979 2.05268 5.35355 2.14645C5.44732 2.24021 5.5 2.36739 5.5 2.5C5.5 2.63261 5.44732 2.75979 5.35355 2.85355C5.25979 2.94732 5.13261 3 5 3Z"
-                              fill="#323232" />
-                          </svg>
-                          One time spend limit :
-                        </h5>
-                        <p class="balance-card__amount-sm text-black mb-0">₦0.00 / ₦1,000,000.00</p>
-                      </div>
-                    </div>
-                    <div class="balance-card__border">
-                      <div class="balance-card__header pb-3">
-                        <div class="progress col-12" style="height: 5px;">
-                          <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valuemax="100"></div>
+                      <div class="balance-card__border">
+                        <div class="balance-card__header pb-3">
+                          <div class="progress col-12" style="height: 5px;">
+                            <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25"
+                              aria-valuemin="0" aria-valuemax="100"></div>
+                          </div>
+                        </div>
+                        <div class="balance-card__body d-flex justify-content-between align-content-center">
+                          <h5 class="balance-card-title text-black">
+                            <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                              xmlns="http://www.w3.org/2000/svg">
+                              <path
+                                d="M0 9H10V10H0V9ZM1 5H2V8.5H1V5ZM3.5 5H4.5V8.5H3.5V5ZM5.5 5H6.5V8.5H5.5V5ZM8 5H9V8.5H8V5ZM0 2.5L5 0L10 2.5V4.5H0V2.5ZM1 3.118V3.5H9V3.118L5 1.118L1 3.118ZM5 3C4.86739 3 4.74021 2.94732 4.64645 2.85355C4.55268 2.75979 4.5 2.63261 4.5 2.5C4.5 2.36739 4.55268 2.24021 4.64645 2.14645C4.74021 2.05268 4.86739 2 5 2C5.13261 2 5.25979 2.05268 5.35355 2.14645C5.44732 2.24021 5.5 2.36739 5.5 2.5C5.5 2.63261 5.44732 2.75979 5.35355 2.85355C5.25979 2.94732 5.13261 3 5 3Z"
+                                fill="#323232" />
+                            </svg>
+                            Daily Withdrawal Limit:
+                          </h5>
+                          <p class="balance-card__amount-sm text-black mb-0">₦0.00 / ₦2,000,000.00</p>
                         </div>
                       </div>
-                      <div class="balance-card__body d-flex justify-content-between align-content-center">
-                        <h5 class="balance-card-title text-black">
-                          <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
-                            xmlns="http://www.w3.org/2000/svg">
-                            <path
-                              d="M0 9H10V10H0V9ZM1 5H2V8.5H1V5ZM3.5 5H4.5V8.5H3.5V5ZM5.5 5H6.5V8.5H5.5V5ZM8 5H9V8.5H8V5ZM0 2.5L5 0L10 2.5V4.5H0V2.5ZM1 3.118V3.5H9V3.118L5 1.118L1 3.118ZM5 3C4.86739 3 4.74021 2.94732 4.64645 2.85355C4.55268 2.75979 4.5 2.63261 4.5 2.5C4.5 2.36739 4.55268 2.24021 4.64645 2.14645C4.74021 2.05268 4.86739 2 5 2C5.13261 2 5.25979 2.05268 5.35355 2.14645C5.44732 2.24021 5.5 2.36739 5.5 2.5C5.5 2.63261 5.44732 2.75979 5.35355 2.85355C5.25979 2.94732 5.13261 3 5 3Z"
-                              fill="#323232" />
-                          </svg>
-                          Daily Withdrawal Limit:
-                        </h5>
-                        <p class="balance-card__amount-sm text-black mb-0">₦0.00 / ₦2,000,000.00</p>
-                      </div>
-                    </div>
-                    <div class="d-flex justify-content-center dropdown">
-                      <button class="btn balance-card__dropdown dropdown-toggle" type="button" id="balanceDropdown"
-                        data-bs-toggle="dropdown" aria-expanded="false">Learn about
-                        limits</button>
-                      <ul class="dropdown-menu" aria-labelledby="balanceDropdown">
-                        <p>
-                          A <span class="text-blue-3">One Time Spend Limit</span> is the
-                          maximum amount you can withdraw or spend at a single transaction, which can be
-                          repeated as long as you do not exceed the daily withdrawal limits.
-                        </p>
-                        <p>
-                          A <span class="text-blue-3">Daily Withdrawal Limit</span> is the maximum amount of
-                          money you can withdraw, in-app spending, transfer etc in a day( within 24hrs,
-                          which is bound by number of transactions.
+                      <div class="d-flex justify-content-center dropdown">
+                        <button class="btn balance-card__dropdown dropdown-toggle" type="button" id="balanceDropdown"
+                          data-bs-toggle="dropdown" aria-expanded="false">Learn about
+                          limits</button>
+                        <ul class="dropdown-menu" aria-labelledby="balanceDropdown">
+                          <p>
+                            A <span class="text-blue-3">One Time Spend Limit</span> is the
+                            maximum amount you can withdraw or spend at a single transaction, which can be
+                            repeated as long as you do not exceed the daily withdrawal limits.
+                          </p>
+                          <p>
+                            A <span class="text-blue-3">Daily Withdrawal Limit</span> is the maximum amount of
+                            money you can withdraw, in-app spending, transfer etc in a day( within 24hrs,
+                            which is bound by number of transactions.
 
-                        </p>
-                      </ul>
+                          </p>
+                        </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -653,6 +655,42 @@
             breakpoint: 480,
             settings: {
               slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+      $('.responsive-slide').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
               slidesToScroll: 1
             }
           }
