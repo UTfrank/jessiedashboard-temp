@@ -46,6 +46,9 @@ body {
   .sidebar__trigger {
     display: inline-block;
   }
+  .sidebar.open ~ .content {
+    filter: blur(8px) !important;
+  }
 }
 .sidebar__header {
   display: block;
@@ -1263,14 +1266,18 @@ div.col-md-12:nth-child(1)
   .balance-card__body a.btn {
     font-size: 13px;
   }
-  .table > thead:nth-child(1) {
-    display: none;
-  }
-  .table > :not(:first-child) {
-    border-top: unset;
-  }
   a.card-link:nth-child(2) > div:nth-child(1) {
     display: none;
+  }
+  #transaction_wrapper .row {
+    justify-content: space-between;
+  }
+  #transaction_wrapper .row .col-sm-12 {
+    width: 50%;
+  }
+  #transaction_length > label:nth-child(1) select {
+    margin-right: 3px;
+    margin-left: 3px;
   }
   tbody,
   td,
