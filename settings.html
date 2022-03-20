@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Solway&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@mdi/font@6.5.95/css/materialdesignicons.min.css">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+
+  <link href="css/main.css" rel="stylesheet" />
+  <title>Jessie Dashboard - Settings</title>
+</head>
+
+<body>
+  <!-- modals -->
+  <!-- referral modal -->
+  <div class="referral-modal modal fade" id="exampleModal" data-bs-backdrop="static" tabindex="-1"
+    aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel"><img src="images/jessie-white.png" alt="" width="132">
+          </h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="bg-white">
+            <div class="qr-code-wrapper"><img src="images/qrcode.png" alt="" class="img-fluid"></div>
+            <div class="referral-modal-text">Referral ID</div>
+            <p class="referral-modal-text">evansjaja/22023</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- delete modal -->
+  <!-- Modal -->
+  <div class="modal dashboard-modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header px-5">
+          <!-- <h5 class="modal-title mx-auto" id="deleteModalLabel">
+            <img src="images/jessiepay.svg" alt="" width="137">
+          </h5> -->
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div class="img-container mx-auto d-flex justify-content-center align-items-center">
+            <img src="images/delete.png" alt="" style="width: 106px;">
+          </div>
+          <h4 class="text-center">We’re sorry to see you go</h4>
+          <p class="text-center">Be advised that deleting your account is final and
+            there’s no way to restore it</p>
+          <div class="btn-container d-flex justify-content-center mt-4">
+            <p class="text-center">
+              Thank you for choosing Jessie
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main__wrapper">
+    <div class="sidebar">
+      <div class="sidebar__header">
+        <button class="btn sidebar__close">
+          <i class="bi bi-x"></i>
+        </button>
+        <img src="images/jessiepay.svg" alt="">
+      </div>
+      <nav class="sidebar__nav">
+        <ul>
+          <li class="sidebar__nav-item">
+            <a href="index.html" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon">
+                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M3.69961 7.1C1.79961 7.1 0.0996094 5.5 0.0996094 3.5C0.0996094 1.5 1.79961 0 3.69961 0C5.59961 0 7.19961 1.6 7.19961 3.5C7.19961 5.5 5.59961 7.1 3.69961 7.1Z" />
+                  <path
+                    d="M3.69961 7.1C1.79961 7.1 0.0996094 5.5 0.0996094 3.5C0.0996094 1.5 1.79961 0 3.69961 0C5.59961 0 7.19961 1.6 7.19961 3.5C7.19961 5.5 5.59961 7.1 3.69961 7.1Z" />
+                  <path
+                    d="M5.3 16.6992H2C1 16.6992 0 15.8992 0 14.8992V11.5992C0 10.4992 0.9 9.69922 2 9.69922H5.3C6.3 9.69922 7.2 10.4992 7.2 11.5992V14.8992C7.2 15.7992 6.3 16.6992 5.3 16.6992Z" />
+                  <path
+                    d="M5.3 16.6992H2C1 16.6992 0 15.8992 0 14.8992V11.5992C0 10.4992 0.9 9.69922 2 9.69922H5.3C6.3 9.69922 7.2 10.4992 7.2 11.5992V14.8992C7.2 15.7992 6.3 16.6992 5.3 16.6992Z" />
+                  <path
+                    d="M14.9998 16.7H11.6998C10.6998 16.7 9.7998 15.9 9.7998 14.8V1.9C9.7998 0.9 10.5998 0 11.6998 0H14.9998C15.9998 0 16.8998 0.8 16.8998 1.9V14.8C16.8998 15.8 15.9998 16.7 14.9998 16.7Z" />
+                  <path
+                    d="M14.9998 16.7H11.6998C10.6998 16.7 9.7998 15.9 9.7998 14.8V1.9C9.7998 0.9 10.5998 0 11.6998 0H14.9998C15.9998 0 16.8998 0.8 16.8998 1.9V14.8C16.8998 15.8 15.9998 16.7 14.9998 16.7Z" />
+                </svg>
+
+
+              </span>
+              <span class="sidebar__nav-text">Dashboard</span>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="wallet.html" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 9H21C21.2652 9 21.5196 9.10536 21.7071 9.29289C21.8946 9.48043 22 9.73478 22 10V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V9ZM3 3H18V7H2V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM15 14V16H18V14H15Z" />
+                  <path
+                    d="M2 9H21C21.2652 9 21.5196 9.10536 21.7071 9.29289C21.8946 9.48043 22 9.73478 22 10V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V9ZM3 3H18V7H2V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM15 14V16H18V14H15Z" />
+                </svg>
+              </span>
+              <span class="sidebar__nav-text">Wallets</span>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="product.html" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M2 9H21C21.2652 9 21.5196 9.10536 21.7071 9.29289C21.8946 9.48043 22 9.73478 22 10V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V9ZM3 3H18V7H2V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM15 14V16H18V14H15Z" />
+                  <path
+                    d="M2 9H21C21.2652 9 21.5196 9.10536 21.7071 9.29289C21.8946 9.48043 22 9.73478 22 10V20C22 20.2652 21.8946 20.5196 21.7071 20.7071C21.5196 20.8946 21.2652 21 21 21H3C2.73478 21 2.48043 20.8946 2.29289 20.7071C2.10536 20.5196 2 20.2652 2 20V9ZM3 3H18V7H2V4C2 3.73478 2.10536 3.48043 2.29289 3.29289C2.48043 3.10536 2.73478 3 3 3ZM15 14V16H18V14H15Z" />
+                </svg>
+
+              </span>
+              <span class="sidebar__nav-text">Products</span>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="transactions.html" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19.1735 20H4.82648C3.82192 20 3 19.0994 3 17.9987V7.00133C3 5.9006 3.82192 5 4.82648 5H19.1735C20.1781 5 21 5.9006 21 7.00133V17.9987C21 19.0994 20.1872 20 19.1735 20Z" />
+                  <path
+                    d="M19.1735 20H4.82648C3.82192 20 3 19.0994 3 17.9987V7.00133C3 5.9006 3.82192 5 4.82648 5H19.1735C20.1781 5 21 5.9006 21 7.00133V17.9987C21 19.0994 20.1872 20 19.1735 20Z"
+                    fill="black" fill-opacity="0.2" />
+                  <path
+                    d="M19.1735 20H4.82648C3.82192 20 3 19.0994 3 17.9987V7.00133C3 5.9006 3.82192 5 4.82648 5H19.1735C20.1781 5 21 5.9006 21 7.00133V17.9987C21 19.0994 20.1872 20 19.1735 20Z"
+                    stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round" />
+                  <path
+                    d="M19.1735 20H4.82648C3.82192 20 3 19.0994 3 17.9987V7.00133C3 5.9006 3.82192 5 4.82648 5H19.1735C20.1781 5 21 5.9006 21 7.00133V17.9987C21 19.0994 20.1872 20 19.1735 20Z"
+                    stroke="black" stroke-opacity="0.2" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M7.14014 7V3" stroke="black" stroke-opacity="0.2" stroke-width="1.3" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M7.14014 7V3" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <path d="M16.5703 7V3" stroke="black" stroke-opacity="0.2" stroke-width="1.3" stroke-miterlimit="10"
+                    stroke-linecap="round" stroke-linejoin="round" />
+                  <path d="M16.5703 7V3" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                  <rect x="7.80005" y="12" width="1.3" height="1.3" fill="white" />
+                  <rect x="11.8" y="12" width="1.3" height="1.3" fill="white" />
+                  <rect x="15.8" y="12" width="1.3" height="1.3" fill="white" />
+                  <rect x="7.80005" y="15" width="1.3" height="1.3" fill="white" />
+                  <rect x="11.8" y="15" width="1.3" height="1.3" fill="white" />
+                  <rect x="15.8" y="15" width="1.3" height="1.3" fill="white" />
+                  <path d="M2 9L22 9" stroke="white" stroke-width="1.3" stroke-miterlimit="10" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+              </span>
+              <span class="sidebar__nav-text">Transaction Log</span>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="market.html" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M3 12H7V21H3V12ZM17 8H21V21H17V8ZM10 2H14V21H10V2Z" />
+                  <path d="M3 12H7V21H3V12ZM17 8H21V21H17V8ZM10 2H14V21H10V2Z" />
+                </svg>
+
+              </span>
+              <span class="sidebar__nav-text">Markets</span>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="settings.html" class="sidebar__nav-link active">
+              <span class="sidebar__nav-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10.012 12.8301C8.40751 12.8301 7.10962 11.5801 7.10962 10.0101C7.10962 8.44008 8.40751 7.18008 10.012 7.18008C11.6165 7.18008 12.8837 8.44008 12.8837 10.0101C12.8837 11.5801 11.6165 12.8301 10.012 12.8301Z" />
+                  <path
+                    d="M10.012 12.8301C8.40751 12.8301 7.10962 11.5801 7.10962 10.0101C7.10962 8.44008 8.40751 7.18008 10.012 7.18008C11.6165 7.18008 12.8837 8.44008 12.8837 10.0101C12.8837 11.5801 11.6165 12.8301 10.012 12.8301Z" />
+                  <g opacity="0.4">
+                    <path
+                      d="M19.2301 12.3701C19.036 12.0701 18.76 11.7701 18.4023 11.5801C18.1162 11.4401 17.9322 11.2101 17.7687 10.9401C17.2475 10.0801 17.5541 8.95009 18.4228 8.44009C19.4447 7.87009 19.7718 6.60009 19.179 5.61009L18.4943 4.43009C17.9118 3.44009 16.6344 3.09009 15.6226 3.67009C14.7233 4.15009 13.5685 3.83009 13.0473 2.98009C12.8838 2.70009 12.7918 2.40009 12.8122 2.10009C12.8429 1.71009 12.7203 1.34009 12.5363 1.04009C12.1582 0.420092 11.4735 9.15527e-05 10.7172 9.15527e-05H9.27627C8.53024 0.0200916 7.84553 0.420092 7.4674 1.04009C7.27323 1.34009 7.16081 1.71009 7.18125 2.10009C7.20169 2.40009 7.10972 2.70009 6.9462 2.98009C6.425 3.83009 5.27019 4.15009 4.38109 3.67009C3.35913 3.09009 2.09191 3.44009 1.49917 4.43009L0.814459 5.61009C0.231943 6.60009 0.55897 7.87009 1.57071 8.44009C2.43937 8.95009 2.74596 10.0801 2.23498 10.9401C2.06125 11.2101 1.87729 11.4401 1.59115 11.5801C1.24368 11.7701 0.937094 12.0701 0.773581 12.3701C0.395456 12.9901 0.415896 13.7701 0.79402 14.4201L1.49917 15.6201C1.87729 16.2601 2.58245 16.6601 3.31825 16.6601C3.66572 16.6601 4.0745 16.5601 4.40153 16.3601C4.65702 16.1901 4.96361 16.1301 5.30085 16.1301C6.31259 16.1301 7.16081 16.9601 7.18125 17.9501C7.18125 19.1001 8.12145 20.0001 9.30692 20.0001H10.6968C11.872 20.0001 12.8122 19.1001 12.8122 17.9501C12.8429 16.9601 13.6911 16.1301 14.7029 16.1301C15.0299 16.1301 15.3365 16.1901 15.6022 16.3601C15.9292 16.5601 16.3278 16.6601 16.6855 16.6601C17.411 16.6601 18.1162 16.2601 18.4943 15.6201L19.2097 14.4201C19.5776 13.7501 19.6083 12.9901 19.2301 12.3701Z" />
+                    <path
+                      d="M19.2301 12.3701C19.036 12.0701 18.76 11.7701 18.4023 11.5801C18.1162 11.4401 17.9322 11.2101 17.7687 10.9401C17.2475 10.0801 17.5541 8.95009 18.4228 8.44009C19.4447 7.87009 19.7718 6.60009 19.179 5.61009L18.4943 4.43009C17.9118 3.44009 16.6344 3.09009 15.6226 3.67009C14.7233 4.15009 13.5685 3.83009 13.0473 2.98009C12.8838 2.70009 12.7918 2.40009 12.8122 2.10009C12.8429 1.71009 12.7203 1.34009 12.5363 1.04009C12.1582 0.420092 11.4735 9.15527e-05 10.7172 9.15527e-05H9.27627C8.53024 0.0200916 7.84553 0.420092 7.4674 1.04009C7.27323 1.34009 7.16081 1.71009 7.18125 2.10009C7.20169 2.40009 7.10972 2.70009 6.9462 2.98009C6.425 3.83009 5.27019 4.15009 4.38109 3.67009C3.35913 3.09009 2.09191 3.44009 1.49917 4.43009L0.814459 5.61009C0.231943 6.60009 0.55897 7.87009 1.57071 8.44009C2.43937 8.95009 2.74596 10.0801 2.23498 10.9401C2.06125 11.2101 1.87729 11.4401 1.59115 11.5801C1.24368 11.7701 0.937094 12.0701 0.773581 12.3701C0.395456 12.9901 0.415896 13.7701 0.79402 14.4201L1.49917 15.6201C1.87729 16.2601 2.58245 16.6601 3.31825 16.6601C3.66572 16.6601 4.0745 16.5601 4.40153 16.3601C4.65702 16.1901 4.96361 16.1301 5.30085 16.1301C6.31259 16.1301 7.16081 16.9601 7.18125 17.9501C7.18125 19.1001 8.12145 20.0001 9.30692 20.0001H10.6968C11.872 20.0001 12.8122 19.1001 12.8122 17.9501C12.8429 16.9601 13.6911 16.1301 14.7029 16.1301C15.0299 16.1301 15.3365 16.1901 15.6022 16.3601C15.9292 16.5601 16.3278 16.6601 16.6855 16.6601C17.411 16.6601 18.1162 16.2601 18.4943 15.6201L19.2097 14.4201C19.5776 13.7501 19.6083 12.9901 19.2301 12.3701Z" />
+                    <path
+                      d="M19.2301 12.3701C19.036 12.0701 18.76 11.7701 18.4023 11.5801C18.1162 11.4401 17.9322 11.2101 17.7687 10.9401C17.2475 10.0801 17.5541 8.95009 18.4228 8.44009C19.4447 7.87009 19.7718 6.60009 19.179 5.61009L18.4943 4.43009C17.9118 3.44009 16.6344 3.09009 15.6226 3.67009C14.7233 4.15009 13.5685 3.83009 13.0473 2.98009C12.8838 2.70009 12.7918 2.40009 12.8122 2.10009C12.8429 1.71009 12.7203 1.34009 12.5363 1.04009C12.1582 0.420092 11.4735 9.15527e-05 10.7172 9.15527e-05H9.27627C8.53024 0.0200916 7.84553 0.420092 7.4674 1.04009C7.27323 1.34009 7.16081 1.71009 7.18125 2.10009C7.20169 2.40009 7.10972 2.70009 6.9462 2.98009C6.425 3.83009 5.27019 4.15009 4.38109 3.67009C3.35913 3.09009 2.09191 3.44009 1.49917 4.43009L0.814459 5.61009C0.231943 6.60009 0.55897 7.87009 1.57071 8.44009C2.43937 8.95009 2.74596 10.0801 2.23498 10.9401C2.06125 11.2101 1.87729 11.4401 1.59115 11.5801C1.24368 11.7701 0.937094 12.0701 0.773581 12.3701C0.395456 12.9901 0.415896 13.7701 0.79402 14.4201L1.49917 15.6201C1.87729 16.2601 2.58245 16.6601 3.31825 16.6601C3.66572 16.6601 4.0745 16.5601 4.40153 16.3601C4.65702 16.1901 4.96361 16.1301 5.30085 16.1301C6.31259 16.1301 7.16081 16.9601 7.18125 17.9501C7.18125 19.1001 8.12145 20.0001 9.30692 20.0001H10.6968C11.872 20.0001 12.8122 19.1001 12.8122 17.9501C12.8429 16.9601 13.6911 16.1301 14.7029 16.1301C15.0299 16.1301 15.3365 16.1901 15.6022 16.3601C15.9292 16.5601 16.3278 16.6601 16.6855 16.6601C17.411 16.6601 18.1162 16.2601 18.4943 15.6201L19.2097 14.4201C19.5776 13.7501 19.6083 12.9901 19.2301 12.3701Z" />
+                  </g>
+                </svg>
+
+              </span>
+              <span class="sidebar__nav-text">Settings</span>
+            </a>
+          </li>
+          <li class="sidebar__nav-item">
+            <a href="help.html" class="sidebar__nav-link">
+              <span class="sidebar__nav-icon">
+                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM9 13V15H11V13H9ZM11 11.355C11.8037 11.1128 12.4936 10.59 12.9442 9.88174C13.3947 9.17353 13.5759 8.32705 13.4547 7.49647C13.3336 6.66588 12.9181 5.90644 12.284 5.35646C11.6499 4.80647 10.8394 4.50254 10 4.5C9.19085 4.49994 8.40666 4.78015 7.78079 5.29299C7.15492 5.80583 6.72601 6.51963 6.567 7.313L8.529 7.706C8.58468 7.42743 8.71832 7.1704 8.91437 6.96482C9.11042 6.75923 9.36081 6.61354 9.63643 6.54471C9.91204 6.47587 10.2015 6.48671 10.4712 6.57597C10.7409 6.66523 10.9797 6.82924 11.1598 7.04891C11.34 7.26858 11.454 7.53489 11.4887 7.81684C11.5234 8.0988 11.4773 8.3848 11.3558 8.64158C11.2343 8.89837 11.0423 9.11536 10.8023 9.26733C10.5623 9.4193 10.2841 9.49998 10 9.5C9.73478 9.5 9.48043 9.60536 9.29289 9.79289C9.10536 9.98043 9 10.2348 9 10.5V12H11V11.355Z" />
+                  <path
+                    d="M10 20C4.477 20 0 15.523 0 10C0 4.477 4.477 0 10 0C15.523 0 20 4.477 20 10C20 15.523 15.523 20 10 20ZM9 13V15H11V13H9ZM11 11.355C11.8037 11.1128 12.4936 10.59 12.9442 9.88174C13.3947 9.17353 13.5759 8.32705 13.4547 7.49647C13.3336 6.66588 12.9181 5.90644 12.284 5.35646C11.6499 4.80647 10.8394 4.50254 10 4.5C9.19085 4.49994 8.40666 4.78015 7.78079 5.29299C7.15492 5.80583 6.72601 6.51963 6.567 7.313L8.529 7.706C8.58468 7.42743 8.71832 7.1704 8.91437 6.96482C9.11042 6.75923 9.36081 6.61354 9.63643 6.54471C9.91204 6.47587 10.2015 6.48671 10.4712 6.57597C10.7409 6.66523 10.9797 6.82924 11.1598 7.04891C11.34 7.26858 11.454 7.53489 11.4887 7.81684C11.5234 8.0988 11.4773 8.3848 11.3558 8.64158C11.2343 8.89837 11.0423 9.11536 10.8023 9.26733C10.5623 9.4193 10.2841 9.49998 10 9.5C9.73478 9.5 9.48043 9.60536 9.29289 9.79289C9.10536 9.98043 9 10.2348 9 10.5V12H11V11.355Z" />
+                </svg>
+
+              </span>
+              <span class="sidebar__nav-text">Help</span>
+            </a>
+          </li>
+
+          <li class="sidebar__footer">
+            <span class="sidebar__footer-heading">
+              Jessie
+            </span><br>
+            <span class="sidebar__footer-text">
+              &copy; 2022 <br>
+              All rights reserved
+            </span>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="content">
+      <div class="container">
+        <nav class="navbar navbar-expand navbar-light dashboard__header">
+          <div class="container-fluid p-0">
+            <button class="btn sidebar__trigger">
+              <i class="bi bi-list text-50"></i>
+            </button>
+            <div class="navbar-brand ">
+              <h3 class=" dashboard__heading">Settings</h3>
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                  <a class="nav-link dashboard__nav-link border-right 
+ dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <svg width="20" height="22" viewBox="0 0 20 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20 18H0V16H1V9.031C1 4.043 5.03 0 10 0C14.97 0 19 4.043 19 9.031V16H20V18ZM7.5 19H12.5C12.5 19.663 12.2366 20.2989 11.7678 20.7678C11.2989 21.2366 10.663 21.5 10 21.5C9.33696 21.5 8.70107 21.2366 8.23223 20.7678C7.76339 20.2989 7.5 19.663 7.5 19Z"
+                        fill="black" />
+                      <path
+                        d="M20 18H0V16H1V9.031C1 4.043 5.03 0 10 0C14.97 0 19 4.043 19 9.031V16H20V18ZM7.5 19H12.5C12.5 19.663 12.2366 20.2989 11.7678 20.7678C11.2989 21.2366 10.663 21.5 10 21.5C9.33696 21.5 8.70107 21.2366 8.23223 20.7678C7.76339 20.2989 7.5 19.663 7.5 19Z"
+                        fill="#F8F9FB" fill-opacity="0.2" />
+                    </svg>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dashboard__nav-link dropdown-toggle d-flex align-items-center fw-bold" href="#"
+                    id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <img src="images/boy.png" alt="">
+                    <strong class="ms-2">Username</strong>
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M10.012 12.8301C8.40751 12.8301 7.10962 11.5801 7.10962 10.0101C7.10962 8.44008 8.40751 7.18008 10.012 7.18008C11.6165 7.18008 12.8837 8.44008 12.8837 10.0101C12.8837 11.5801 11.6165 12.8301 10.012 12.8301Z"
+                            fill="#C4C4C4" />
+                          <path
+                            d="M10.012 12.8301C8.40751 12.8301 7.10962 11.5801 7.10962 10.0101C7.10962 8.44008 8.40751 7.18008 10.012 7.18008C11.6165 7.18008 12.8837 8.44008 12.8837 10.0101C12.8837 11.5801 11.6165 12.8301 10.012 12.8301Z"
+                            fill="black" fill-opacity="0.2" />
+                          <g opacity="0.4">
+                            <path
+                              d="M19.2301 12.3701C19.036 12.0701 18.76 11.7701 18.4023 11.5801C18.1162 11.4401 17.9322 11.2101 17.7687 10.9401C17.2475 10.0801 17.5541 8.95009 18.4228 8.44009C19.4447 7.87009 19.7718 6.60009 19.179 5.61009L18.4943 4.43009C17.9118 3.44009 16.6344 3.09009 15.6226 3.67009C14.7233 4.15009 13.5685 3.83009 13.0473 2.98009C12.8838 2.70009 12.7918 2.40009 12.8122 2.10009C12.8429 1.71009 12.7203 1.34009 12.5363 1.04009C12.1582 0.420092 11.4735 9.15527e-05 10.7172 9.15527e-05H9.27627C8.53024 0.0200916 7.84553 0.420092 7.4674 1.04009C7.27323 1.34009 7.16081 1.71009 7.18125 2.10009C7.20169 2.40009 7.10972 2.70009 6.9462 2.98009C6.425 3.83009 5.27019 4.15009 4.38109 3.67009C3.35913 3.09009 2.09191 3.44009 1.49917 4.43009L0.814459 5.61009C0.231943 6.60009 0.55897 7.87009 1.57071 8.44009C2.43937 8.95009 2.74596 10.0801 2.23498 10.9401C2.06125 11.2101 1.87729 11.4401 1.59115 11.5801C1.24368 11.7701 0.937094 12.0701 0.773581 12.3701C0.395456 12.9901 0.415896 13.7701 0.79402 14.4201L1.49917 15.6201C1.87729 16.2601 2.58245 16.6601 3.31825 16.6601C3.66572 16.6601 4.0745 16.5601 4.40153 16.3601C4.65702 16.1901 4.96361 16.1301 5.30085 16.1301C6.31259 16.1301 7.16081 16.9601 7.18125 17.9501C7.18125 19.1001 8.12145 20.0001 9.30692 20.0001H10.6968C11.872 20.0001 12.8122 19.1001 12.8122 17.9501C12.8429 16.9601 13.6911 16.1301 14.7029 16.1301C15.0299 16.1301 15.3365 16.1901 15.6022 16.3601C15.9292 16.5601 16.3278 16.6601 16.6855 16.6601C17.411 16.6601 18.1162 16.2601 18.4943 15.6201L19.2097 14.4201C19.5776 13.7501 19.6083 12.9901 19.2301 12.3701Z"
+                              fill="#C4C4C4" />
+                            <path
+                              d="M19.2301 12.3701C19.036 12.0701 18.76 11.7701 18.4023 11.5801C18.1162 11.4401 17.9322 11.2101 17.7687 10.9401C17.2475 10.0801 17.5541 8.95009 18.4228 8.44009C19.4447 7.87009 19.7718 6.60009 19.179 5.61009L18.4943 4.43009C17.9118 3.44009 16.6344 3.09009 15.6226 3.67009C14.7233 4.15009 13.5685 3.83009 13.0473 2.98009C12.8838 2.70009 12.7918 2.40009 12.8122 2.10009C12.8429 1.71009 12.7203 1.34009 12.5363 1.04009C12.1582 0.420092 11.4735 9.15527e-05 10.7172 9.15527e-05H9.27627C8.53024 0.0200916 7.84553 0.420092 7.4674 1.04009C7.27323 1.34009 7.16081 1.71009 7.18125 2.10009C7.20169 2.40009 7.10972 2.70009 6.9462 2.98009C6.425 3.83009 5.27019 4.15009 4.38109 3.67009C3.35913 3.09009 2.09191 3.44009 1.49917 4.43009L0.814459 5.61009C0.231943 6.60009 0.55897 7.87009 1.57071 8.44009C2.43937 8.95009 2.74596 10.0801 2.23498 10.9401C2.06125 11.2101 1.87729 11.4401 1.59115 11.5801C1.24368 11.7701 0.937094 12.0701 0.773581 12.3701C0.395456 12.9901 0.415896 13.7701 0.79402 14.4201L1.49917 15.6201C1.87729 16.2601 2.58245 16.6601 3.31825 16.6601C3.66572 16.6601 4.0745 16.5601 4.40153 16.3601C4.65702 16.1901 4.96361 16.1301 5.30085 16.1301C6.31259 16.1301 7.16081 16.9601 7.18125 17.9501C7.18125 19.1001 8.12145 20.0001 9.30692 20.0001H10.6968C11.872 20.0001 12.8122 19.1001 12.8122 17.9501C12.8429 16.9601 13.6911 16.1301 14.7029 16.1301C15.0299 16.1301 15.3365 16.1901 15.6022 16.3601C15.9292 16.5601 16.3278 16.6601 16.6855 16.6601C17.411 16.6601 18.1162 16.2601 18.4943 15.6201L19.2097 14.4201C19.5776 13.7501 19.6083 12.9901 19.2301 12.3701Z"
+                              fill="black" fill-opacity="0.2" />
+                            <path
+                              d="M19.2301 12.3701C19.036 12.0701 18.76 11.7701 18.4023 11.5801C18.1162 11.4401 17.9322 11.2101 17.7687 10.9401C17.2475 10.0801 17.5541 8.95009 18.4228 8.44009C19.4447 7.87009 19.7718 6.60009 19.179 5.61009L18.4943 4.43009C17.9118 3.44009 16.6344 3.09009 15.6226 3.67009C14.7233 4.15009 13.5685 3.83009 13.0473 2.98009C12.8838 2.70009 12.7918 2.40009 12.8122 2.10009C12.8429 1.71009 12.7203 1.34009 12.5363 1.04009C12.1582 0.420092 11.4735 9.15527e-05 10.7172 9.15527e-05H9.27627C8.53024 0.0200916 7.84553 0.420092 7.4674 1.04009C7.27323 1.34009 7.16081 1.71009 7.18125 2.10009C7.20169 2.40009 7.10972 2.70009 6.9462 2.98009C6.425 3.83009 5.27019 4.15009 4.38109 3.67009C3.35913 3.09009 2.09191 3.44009 1.49917 4.43009L0.814459 5.61009C0.231943 6.60009 0.55897 7.87009 1.57071 8.44009C2.43937 8.95009 2.74596 10.0801 2.23498 10.9401C2.06125 11.2101 1.87729 11.4401 1.59115 11.5801C1.24368 11.7701 0.937094 12.0701 0.773581 12.3701C0.395456 12.9901 0.415896 13.7701 0.79402 14.4201L1.49917 15.6201C1.87729 16.2601 2.58245 16.6601 3.31825 16.6601C3.66572 16.6601 4.0745 16.5601 4.40153 16.3601C4.65702 16.1901 4.96361 16.1301 5.30085 16.1301C6.31259 16.1301 7.16081 16.9601 7.18125 17.9501C7.18125 19.1001 8.12145 20.0001 9.30692 20.0001H10.6968C11.872 20.0001 12.8122 19.1001 12.8122 17.9501C12.8429 16.9601 13.6911 16.1301 14.7029 16.1301C15.0299 16.1301 15.3365 16.1901 15.6022 16.3601C15.9292 16.5601 16.3278 16.6601 16.6855 16.6601C17.411 16.6601 18.1162 16.2601 18.4943 15.6201L19.2097 14.4201C19.5776 13.7501 19.6083 12.9901 19.2301 12.3701Z"
+                              fill="black" fill-opacity="0.2" />
+                          </g>
+                        </svg>
+
+                        Settings
+                      </a></li>
+                    <li><a class="dropdown-item" href="#">
+                        <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path
+                            d="M17.4116 8L16.0016 9.41L17.5816 11H9.41162V13H17.5816L16.0016 14.58L17.4116 16L21.4116 12L17.4116 8ZM5.41162 5H12.4116V3H5.41162C4.31162 3 3.41162 3.9 3.41162 5V19C3.41162 20.1 4.31162 21 5.41162 21H12.4116V19H5.41162V5Z"
+                            fill="#C4C4C4" />
+                          <path
+                            d="M17.4116 8L16.0016 9.41L17.5816 11H9.41162V13H17.5816L16.0016 14.58L17.4116 16L21.4116 12L17.4116 8ZM5.41162 5H12.4116V3H5.41162C4.31162 3 3.41162 3.9 3.41162 5V19C3.41162 20.1 4.31162 21 5.41162 21H12.4116V19H5.41162V5Z"
+                            fill="black" fill-opacity="0.2" />
+                        </svg>
+
+                        Logout
+                      </a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <div class="row justify-content-center align-items-center">
+          <div class="col-md-12">
+            <div class="row align-items-center p-0 m-0">
+              <div class="col-12 card px-2 py-3 mb-5">
+                <div class="card-header col-12 bg-white p-0">
+                  <nav>
+                    <div class="nav nav-justified settings__tab" id="nav-tab" role="tablist">
+                      <button class="nav-link settings__link active" id="nav-profile-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile"
+                        aria-selected="true">Profile</button>
+                      <button class="nav-link settings__link" id="nav-bankInfo-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-bankInfo" type="button" role="tab" aria-controls="nav-bankInfo"
+                        aria-selected="false">Bank Information</button>
+                      <button class="nav-link settings__link" id="nav-preferences-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-preferences" type="button" role="tab" aria-controls="nav-preferences"
+                        aria-selected="false">Preferences</button>
+                      <button class="nav-link settings__link" id="nav-security-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-security" type="button" role="tab" aria-controls="nav-security"
+                        aria-selected="false">Security</button>
+                      <button class="nav-link settings__link" id="nav-kyc-tab" data-bs-toggle="tab"
+                        data-bs-target="#nav-kyc" type="button" role="tab" aria-controls="nav-kyc"
+                        aria-selected="false">kyc</button>
+                    </div>
+                  </nav>
+                </div>
+                <div class="col-12 card-body">
+                  <div class="tab-content py-0 py-sm-4" id="nav-tabContent">
+
+                    <!-- Profile Tab -->
+                    <div class="tab-pane fade show active px-0 px-sm-1 px-lg-4" id="nav-profile" role="tabpanel"
+                      aria-labelledby="nav-profile-tab">
+                      <div class="form col-md-9 col-12 mx-auto">
+                        <h4 class="form-header">Profile</h4>
+                        <div class="row input-block">
+                          <label class="col-sm-3 col-12 label col-form-label">Username</label>
+                          <div class="col-sm-9 col-12 form-floating file-input-wrapper">
+                            <div class="file-display">
+                              <img src="images/boy.png" alt="" class="img-fluid">
+                            </div>
+                            <div class="file-input">
+                              <input type="file" id="file" class="file">
+                              <label for="file">
+                                Upload Picture
+                              </label>
+                            </div>
+                            <div class="file-delete"><button class="btn file-delete-btn">Delete</button></div>
+                          </div>
+                        </div>
+                        <div class="row input-block">
+                          <label class="col-sm-3 col-12 label col-form-label">Username</label>
+                          <div class="col-sm-9 col-12 form-floating">
+                            <input type="text" disabled class="form-control disabled" id="profileUsername"
+                              value="Evans Jaja" aria-label="Disabled input example">
+                            <label for="profileUsername" class="col-sm-2 form-label">Username</label>
+                          </div>
+                        </div>
+                        <div class="row input-block">
+                          <label class="col-sm-3 col-12 label col-form-label">Email</label>
+                          <div class="col-sm-9 col-12 form-floating">
+                            <input type="email" disabled class="form-control disabled" id="profileEmail"
+                              value="hello@jessiepay.com" aria-label="Disabled input example">
+                            <label for="profileEmail" class="col-sm-2 form-label">Email</label>
+                          </div>
+                        </div>
+                        <div class="row input-block">
+                          <label class="col-sm-3 col-12 label col-form-label">Phone Number</label>
+                          <div class="col-sm-9 col-12 form-floating">
+                            <input type="tel" disabled class="form-control disabled" id="profilePhone"
+                              value="+234 701 433 2099" aria-label="Disabled input example">
+                            <label for="profilePhone" class="col-sm-2 form-label">Phone Number</label>
+                          </div>
+                        </div>
+                        <div class="row input-block">
+                          <hr class="dropdown-divider">
+                        </div>
+                        <h4 class="form-header">Referral</h4>
+                        <div class="row input-block">
+                          <label class="col-sm-3 col-12 label col-form-label">Referral ID</label>
+                          <div class="col-sm-9 col-12 form-floating">
+                            <input type="text" disabled class="form-control text-center disabled" id="profileReferralID"
+                              value="evansjaja/22023" aria-label="Disabled input example">
+                            <!-- <label for="profileReferralID" class="col-sm-2 form-label">Referral ID</label> -->
+                            <div class="form-icon-1">
+                              <svg width="12" height="17" viewBox="0 0 12 17" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M0 16.5C0 14.9087 0.632141 13.3826 1.75736 12.2574C2.88258 11.1321 4.4087 10.5 6 10.5C7.5913 10.5 9.11742 11.1321 10.2426 12.2574C11.3679 13.3826 12 14.9087 12 16.5H10.5C10.5 15.3065 10.0259 14.1619 9.18198 13.318C8.33807 12.4741 7.19347 12 6 12C4.80653 12 3.66193 12.4741 2.81802 13.318C1.97411 14.1619 1.5 15.3065 1.5 16.5H0ZM6 9.75C3.51375 9.75 1.5 7.73625 1.5 5.25C1.5 2.76375 3.51375 0.75 6 0.75C8.48625 0.75 10.5 2.76375 10.5 5.25C10.5 7.73625 8.48625 9.75 6 9.75ZM6 8.25C7.6575 8.25 9 6.9075 9 5.25C9 3.5925 7.6575 2.25 6 2.25C4.3425 2.25 3 3.5925 3 5.25C3 6.9075 4.3425 8.25 6 8.25Z"
+                                  fill="#C4C4C4" />
+                              </svg>
+                            </div>
+                            <button class="form-icon-2">
+                              <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M3.25 3.5V1.25C3.25 1.05109 3.32902 0.860322 3.46967 0.71967C3.61032 0.579018 3.80109 0.5 4 0.5H13C13.1989 0.5 13.3897 0.579018 13.5303 0.71967C13.671 0.860322 13.75 1.05109 13.75 1.25V11.75C13.75 11.9489 13.671 12.1397 13.5303 12.2803C13.3897 12.421 13.1989 12.5 13 12.5H10.75V14.75C10.75 15.164 10.4125 15.5 9.99475 15.5H1.00525C0.906345 15.5006 0.808298 15.4816 0.716742 15.4442C0.625186 15.4068 0.541925 15.3517 0.471744 15.282C0.401563 15.2123 0.345845 15.1294 0.307791 15.0381C0.269737 14.9468 0.250097 14.8489 0.25 14.75L0.25225 4.25C0.25225 3.836 0.58975 3.5 1.0075 3.5H3.25ZM1.75225 5L1.75 14H9.25V5H1.75225ZM4.75 3.5H10.75V11H12.25V2H4.75V3.5Z"
+                                  fill="#323232" />
+                              </svg>
+
+                            </button>
+                          </div>
+                        </div>
+                        <div class="row input-block">
+                          <label class="col-sm-3 col-12 label col-form-label">Referral Link</label>
+                          <div class="col-sm-9 col-12 form-floating">
+                            <input type="text" disabled class="form-control text-center disabled"
+                              id="profileReferralLink" value="jessiepay.com/evansjaja/22023"
+                              aria-label="Disabled input example">
+                            <!-- <label for="profileReferralLink" class="col-sm-2 form-label">Referral Link</label> -->
+                            <div class="form-icon-1">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M8.795 5.08267L9.85625 6.14392C10.3438 6.63144 10.7306 7.21022 10.9944 7.84721C11.2583 8.48421 11.3941 9.16694 11.3941 9.85643C11.3941 10.5459 11.2583 11.2286 10.9944 11.8656C10.7306 12.5026 10.3438 13.0814 9.85625 13.5689L9.59075 13.8337C8.60614 14.8183 7.27071 15.3714 5.87825 15.3714C4.48579 15.3714 3.15037 14.8183 2.16575 13.8337C1.18113 12.8491 0.627983 11.5136 0.627983 10.1212C0.627983 8.72872 1.18113 7.39329 2.16575 6.40867L3.227 7.46992C2.87628 7.81759 2.59768 8.2311 2.4072 8.68673C2.21672 9.14235 2.1181 9.63111 2.11702 10.125C2.11594 10.6188 2.21241 11.108 2.4009 11.5644C2.58938 12.0209 2.86617 12.4356 3.21536 12.7848C3.56456 13.134 3.97929 13.4108 4.43574 13.5993C4.8922 13.7878 5.38139 13.8842 5.87522 13.8832C6.36906 13.8821 6.85782 13.7835 7.31345 13.593C7.76907 13.4025 8.18259 13.1239 8.53025 12.7732L8.79575 12.5077C9.49877 11.8044 9.8937 10.8508 9.8937 9.85643C9.8937 8.86206 9.49877 7.9084 8.79575 7.20517L7.7345 6.14392L8.79575 5.08342L8.795 5.08267ZM13.8335 9.59093L12.773 8.53042C13.1237 8.18276 13.4023 7.76925 13.5928 7.31362C13.7833 6.858 13.8819 6.36924 13.883 5.8754C13.8841 5.38156 13.7876 4.89237 13.5991 4.43592C13.4106 3.97946 13.1338 3.56473 12.7846 3.21554C12.4354 2.86634 12.0207 2.58955 11.5643 2.40107C11.1078 2.21258 10.6186 2.11611 10.1248 2.1172C9.63094 2.11828 9.14218 2.21689 8.68655 2.40737C8.23093 2.59785 7.81742 2.87645 7.46975 3.22717L7.20425 3.49267C6.50124 4.1959 6.1063 5.14956 6.1063 6.14392C6.1063 7.13829 6.50124 8.09195 7.20425 8.79517L8.2655 9.85643L7.20425 10.9169L6.14375 9.85643C5.65619 9.36891 5.26943 8.79013 5.00556 8.15314C4.74169 7.51614 4.60587 6.83341 4.60587 6.14392C4.60587 5.45444 4.74169 4.77171 5.00556 4.13471C5.26943 3.49772 5.65619 2.91894 6.14375 2.43142L6.40925 2.16667C7.39387 1.18206 8.72929 0.628906 10.1218 0.628906C11.5142 0.628906 12.8496 1.18206 13.8343 2.16667C14.8189 3.15129 15.372 4.48672 15.372 5.87917C15.372 7.27163 14.8189 8.60706 13.8343 9.59167L13.8335 9.59093Z"
+                                  fill="#C4C4C4" />
+                              </svg>
+                            </div>
+                            <button class="form-icon-2">
+                              <svg width="14" height="16" viewBox="0 0 14 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M3.25 3.5V1.25C3.25 1.05109 3.32902 0.860322 3.46967 0.71967C3.61032 0.579018 3.80109 0.5 4 0.5H13C13.1989 0.5 13.3897 0.579018 13.5303 0.71967C13.671 0.860322 13.75 1.05109 13.75 1.25V11.75C13.75 11.9489 13.671 12.1397 13.5303 12.2803C13.3897 12.421 13.1989 12.5 13 12.5H10.75V14.75C10.75 15.164 10.4125 15.5 9.99475 15.5H1.00525C0.906345 15.5006 0.808298 15.4816 0.716742 15.4442C0.625186 15.4068 0.541925 15.3517 0.471744 15.282C0.401563 15.2123 0.345845 15.1294 0.307791 15.0381C0.269737 14.9468 0.250097 14.8489 0.25 14.75L0.25225 4.25C0.25225 3.836 0.58975 3.5 1.0075 3.5H3.25ZM1.75225 5L1.75 14H9.25V5H1.75225ZM4.75 3.5H10.75V11H12.25V2H4.75V3.5Z"
+                                  fill="#323232" />
+                              </svg>
+
+                            </button>
+                          </div>
+                        </div>
+                        <div class="col-12 col-md-7 card referral-card mx-auto mt-5">
+                          <div class="row justify-content-center">
+                            <div class="col-12 d-flex justify-content-between p-0">
+                              <div class="col-5 inner-card p-0">
+                                <div>
+                                  No of referrals
+                                </div>
+                                <p>
+                                  0
+                                </p>
+                              </div>
+                              <div class="col-5 inner-card p-0">
+                                <div>
+                                  Total earning
+                                </div>
+                                <p>
+                                  ₦0.00
+                                </p>
+                              </div>
+                            </div>
+                            <div class="col-12 d-flex justify-content-end align-items-center mt-4">
+                              <div>
+                                <btn href="#" class="btn no-transactions-btn" data-bs-toggle="modal"
+                                  data-bs-target="#exampleModal">Invite Friends
+                                  <btn />
+                              </div>
+                              <div class="barcode">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                  xmlns="http://www.w3.org/2000/svg">
+                                  <path
+                                    d="M14.4444 15.5556V14.4444H11.1111V11.1111H14.4444V13.3333H16.6667V15.5556H15.5556V17.7778H13.3333V20H11.1111V16.6667H13.3333V15.5556H14.4444ZM20 20H15.5556V17.7778H17.7778V15.5556H20V20ZM0 0H8.88889V8.88889H0V0ZM2.22222 2.22222V6.66667H6.66667V2.22222H2.22222ZM11.1111 0H20V8.88889H11.1111V0ZM13.3333 2.22222V6.66667H17.7778V2.22222H13.3333ZM0 11.1111H8.88889V20H0V11.1111ZM2.22222 13.3333V17.7778H6.66667V13.3333H2.22222ZM16.6667 11.1111H20V13.3333H16.6667V11.1111ZM3.33333 3.33333H5.55556V5.55556H3.33333V3.33333ZM3.33333 14.4444H5.55556V16.6667H3.33333V14.4444ZM14.4444 3.33333H16.6667V5.55556H14.4444V3.33333Z"
+                                    fill="#323232" fill-opacity="0.4" />
+                                </svg>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Bank Information Tab -->
+                    <div class="tab-pane fade" id="nav-bankInfo" role="tabpanel" aria-labelledby="nav-bankInfo-tab">
+                      <div class="form col-md-9 col-12 mx-auto">
+                        <h4 class="form-header">Bank Information</h4>
+                        <div class="row input-block mb-0">
+                          <label class="col-sm-6 col-12 label col-form-label">Account details</label>
+                          <div class="col-sm-6 col-12 form-floating bank-info-box d-flex align-items-center">
+                            <div class="bank-info-logo">
+                              <img src="images/uba.png" alt="" width="85">
+                            </div>
+                            <div class="bank-info-details">
+                              <p class="account-name">Evans Jaja</p>
+                              <p class="account-number">216*****23</p>
+                              <p class="bank-name">United Bank For Africa</p>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row input-block mb-0">
+                          <label class="col-sm-6 col-12 label col-form-label"></label>
+                          <div class="col-sm-6 col-12 form-floating bank-info-box d-flex align-items-center">
+                            <p class="col-12"><button class="btn bank-info-add text-blue-3">Add another
+                                account</button></p>
+                          </div>
+                        </div>
+                        <div class="row input-block">
+                          <label class="col-sm-6 col-12 label col-form-label"></label>
+                          <div
+                            class="col-sm-6 col-12 form-floating bank-info-box bg-blue-light d-flex align-items-center">
+                            <p class="col-12">
+                              if you need to change your saved bank account, Kindly reach out to
+                              <a href="mailto:support@jessiepay.com" class="text-blue-3">support@jessiepay.com</a>
+                            </p>
+                          </div>
+                        </div>
+
+                      </div>
+
+                      <!-- add bank account form -->
+                      <form class="form col-md-9 col-12 mx-auto d-none">
+                        <h4 class="form-header">Bank Information</h4>
+                        <div class="row input-block mb-0">
+                          <div class="col-sm-6 col-12 form-floating bank-info-box d-flex align-items-center">
+                            <button class="bank-info-back-btn">
+                              <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                  d="M3.828 6.99968H16V8.99968H3.828L9.192 14.3637L7.778 15.7777L0 7.99968L7.778 0.22168L9.192 1.63568L3.828 6.99968Z"
+                                  fill="black" />
+                              </svg>
+                            </button>
+                          </div>
+                        </div>
+                        <div class="row align-items-start input-block mb-4">
+                          <label class="col-sm-6 col-12 label col-form-label">Account details</label>
+                          <div class="col-sm-6 col-12 p-0">
+                            <div class="col-12 form-floating inner-text mb-5">
+                              <input type="text" class="form-control" id="resetPin" value="" aria-label="input example">
+                              <label for="resetPin" class="col-sm-2 form-label">Account Number</label>
+                            </div>
+                            <div class="col-12 form-floating inner-text">
+                              <input type="text" class="form-control" id="resetPin" value="" aria-label="input example">
+                              <label for="resetPin" class="col-sm-2 form-label">Bank Name</label>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row input-block mb-0">
+                          <div class="col-sm-6 col-12"></div>
+                          <div class="col-sm-6 col-12 p-0">
+                            <div class="col-12 d-flex justify-content-end p-0">
+                              <button type="submit" class="btn reset-btn w-auto">Add Account</button>
+                            </div>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+
+                    <!-- Preferences Tab -->
+                    <div class="tab-pane fade" id="nav-preferences" role="tabpanel"
+                      aria-labelledby="nav-preferences-tab">
+                      <div class="form col-12 mx-auto">
+                        <h4 class="form-header">Preferences</h4>
+                        <div class="row input-block align-items-start">
+                          <div class="col-sm-6 col-12">
+                            <label class="col-12 label col-form-label">Notifications
+                            </label>
+                            <p class="col-12 form-para">Choose your preferred notification channel</p>
+                          </div>
+                          <div class="col-sm-6 col-12 form-floating">
+                            <div class="accordion col-12" id="accordionExample">
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingOne">
+                                  <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <div class="accordion-icon-container">
+                                      <div class="wrapper">
+                                        <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                            d="M0.750005 0.75H11.25C11.4047 0.75 11.5531 0.811458 11.6625 0.920854C11.7719 1.03025 11.8333 1.17862 11.8333 1.33333V10.6667C11.8333 10.8214 11.7719 10.9697 11.6625 11.0791C11.5531 11.1885 11.4047 11.25 11.25 11.25H0.750005C0.595295 11.25 0.446922 11.1885 0.337526 11.0791C0.22813 10.9697 0.166672 10.8214 0.166672 10.6667V1.33333C0.166672 1.17862 0.22813 1.03025 0.337526 0.920854C0.446922 0.811458 0.595295 0.75 0.750005 0.75ZM10.6667 3.22217L6.04201 7.36383L1.33334 3.20933V10.0833H10.6667V3.22217ZM1.63142 1.91667L6.03559 5.80283L10.3762 1.91667H1.63142Z"
+                                            fill="#016CBA" />
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    Email notification
+                                  </button>
+                                </h2>
+                                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                                  data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                    <div class="col-12 d-flex border-bottom">
+                                      <div class="col-8">
+                                        Wallet Funding
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-check form-switch">
+                                          <label class="form-check-label text-blue-2"
+                                            for="flexSwitchCheckDefault">off</label>
+                                          <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckDefault">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 d-flex border-bottom">
+                                      <div class="col-8">
+                                        Send / Recieve Fund
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-check form-switch">
+                                          <label class="form-check-label text-blue-2"
+                                            for="flexSwitchCheckDefault">off</label>
+                                          <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckDefault">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 d-flex border-bottom">
+                                      <div class="col-8">
+                                        Buy / Sell
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-check form-switch">
+                                          <label class="form-check-label text-blue-2"
+                                            for="flexSwitchCheckDefault">off</label>
+                                          <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckDefault">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 d-flex">
+                                      <div class="col-8">
+                                        News Letter
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-check form-switch">
+                                          <label class="form-check-label text-blue-2"
+                                            for="flexSwitchCheckDefault">off</label>
+                                          <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckDefault">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <div class="accordion-item">
+                                <h2 class="accordion-header" id="headingTwo">
+                                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div class="accordion-icon-container">
+                                      <div class="wrapper">
+                                        <svg width="13" height="12" viewBox="0 0 13 12" fill="none"
+                                          xmlns="http://www.w3.org/2000/svg">
+                                          <path
+                                            d="M6.78225 1.33317C6.65009 1.70792 6.58282 2.10247 6.58333 2.49984H1.91667V10.6665H10.0833V5.99984C10.4807 6.00035 10.8753 5.93308 11.25 5.80092V11.2498C11.25 11.4045 11.1885 11.5529 11.0791 11.6623C10.9697 11.7717 10.8214 11.8332 10.6667 11.8332H1.33333C1.17862 11.8332 1.03025 11.7717 0.920854 11.6623C0.811458 11.5529 0.75 11.4045 0.75 11.2498V1.9165C0.75 1.76179 0.811458 1.61342 0.920854 1.50403C1.03025 1.39463 1.17862 1.33317 1.33333 1.33317H6.78225ZM10.0833 3.6665C10.3928 3.6665 10.6895 3.54359 10.9083 3.3248C11.1271 3.106 11.25 2.80926 11.25 2.49984C11.25 2.19042 11.1271 1.89367 10.9083 1.67488C10.6895 1.45609 10.3928 1.33317 10.0833 1.33317C9.77391 1.33317 9.47717 1.45609 9.25838 1.67488C9.03958 1.89367 8.91667 2.19042 8.91667 2.49984C8.91667 2.80926 9.03958 3.106 9.25838 3.3248C9.47717 3.54359 9.77391 3.6665 10.0833 3.6665ZM10.0833 4.83317C9.46449 4.83317 8.871 4.58734 8.43342 4.14975C7.99583 3.71217 7.75 3.11868 7.75 2.49984C7.75 1.881 7.99583 1.28751 8.43342 0.849921C8.871 0.412337 9.46449 0.166504 10.0833 0.166504C10.7022 0.166504 11.2957 0.412337 11.7332 0.849921C12.1708 1.28751 12.4167 1.881 12.4167 2.49984C12.4167 3.11868 12.1708 3.71217 11.7332 4.14975C11.2957 4.58734 10.7022 4.83317 10.0833 4.83317Z"
+                                            fill="#016CBA" />
+                                        </svg>
+                                      </div>
+                                    </div>
+                                    Push notification
+                                  </button>
+                                </h2>
+                                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                                  data-bs-parent="#accordionExample">
+                                  <div class="accordion-body">
+                                    <div class="col-12 d-flex border-bottom">
+                                      <div class="col-8">
+                                        Wallet Funding
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-check form-switch">
+                                          <label class="form-check-label text-blue-2"
+                                            for="flexSwitchCheckDefault">off</label>
+                                          <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckDefault">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 d-flex border-bottom">
+                                      <div class="col-8">
+                                        Send / Recieve Fund
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-check form-switch">
+                                          <label class="form-check-label text-blue-2"
+                                            for="flexSwitchCheckDefault">off</label>
+                                          <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckDefault">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 d-flex border-bottom">
+                                      <div class="col-8">
+                                        Buy / Sell
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-check form-switch">
+                                          <label class="form-check-label text-blue-2"
+                                            for="flexSwitchCheckDefault">off</label>
+                                          <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckDefault">
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 d-flex">
+                                      <div class="col-8">
+                                        News Letter
+                                      </div>
+                                      <div class="col">
+                                        <div class="form-check form-switch">
+                                          <label class="form-check-label text-blue-2"
+                                            for="flexSwitchCheckDefault">off</label>
+                                          <input class="form-check-input" type="checkbox" role="switch"
+                                            id="flexSwitchCheckDefault">
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row input-block">
+                          <hr class="dropdown-divider">
+                        </div>
+                        <div class="row input-block">
+                          <label class="col-sm-6 col-12 label col-form-label">Country</label>
+                          <div class="col-sm-6 col-12 form-floating">
+                            <div class="accordion-icon-container">
+                              <div class="wrapper">
+                                <img src="images/1280px-Flag_of_Nigeria.svg.png" alt="" class="img-fluid">
+                              </div>
+                            </div>
+                            <input type="text" disabled class="form-control disabled input-country"
+                              id="preferenceCountry" value="Nigeria" aria-label="Disabled input example">
+                            <!-- <label for="profileEmail" class="col-sm-2 form-label">Email</label> -->
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- Security Tab -->
+                    <div class="tab-pane fade" id="nav-security" role="tabpanel" aria-labelledby="nav-security-tab">
+                      <div class="form col-12 mx-auto">
+                        <h4 class="form-header">Security</h4>
+                        <div class="row input-block align-items-center">
+                          <div class="col-sm-6 col-12">
+                            <label class="col-12 label col-form-label">Reset password
+                            </label>
+                            <p class="col-12 form-para">Can't remember your password? Tap to
+                              reset password</p>
+                          </div>
+                          <div class="col-sm-6 col-12 form-floating">
+                            <p class="col-12">
+                              <a href="reset-password.html" class="text-blue-2">Reset Password</a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row input-block align-items-center">
+                          <div class="col-sm-6 col-12">
+                            <label class="col-12 label col-form-label">Transaction pin
+                            </label>
+                            <p class="col-12 form-para">Transaction pin</p>
+                          </div>
+                          <div class="col-sm-6 col-12 form-floating">
+                            <p class="col-12">
+                              <a href="reset-pin.html" class="text-blue-2">Reset Pin</a>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="row input-block align-items-center">
+                          <div class="col-sm-6 col-12">
+                            <label class="col-12 label col-form-label">2FA
+                            </label>
+                            <p class="col-12 form-para">Activate 2 factor authentication for extra
+                              security</p>
+                          </div>
+                          <div class="col-sm-6 col-12 form-floating">
+                            <div class="form-check form-switch p-0">
+                              <label class="form-check-label" for="flexSwitchCheckDefault">Activate</label>
+                              <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row input-block align-items-center">
+                          <div class="col-sm-6 col-12">
+                            <label class="col-12 label col-form-label">Delete account
+                            </label>
+                            <p class="col-12 form-para">We would prefer if you don't but if you really
+                              must, tap to delete account</p>
+                          </div>
+                          <div class="col-sm-6 col-12 form-floating">
+                            <button class="delete-btn" data-bs-toggle="modal"
+                              data-bs-target="#deleteModal">Delete</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <!-- KYC Tab -->
+                    <div class="tab-pane fade" id="nav-kyc" role="tabpanel" aria-labelledby="nav-kyc-tab">
+                      <div class="form col-12 mx-auto">
+                        <div class="row input-block align-items-start">
+                          <div class="col-sm-6 col-12">
+                            <label class="col-12 label col-form-label">Limits and verification
+                            </label>
+                            <p class="col-12 form-para">This highlights the limits for your
+                              transactions</p>
+                          </div>
+                          <div class="col-sm-6 col-12 form-floating">
+                            <div class="col-12">
+                              <div class="card balance-card no-shadow border">
+                                <div class="balance-card__border">
+                                  <div class="balance-card__header pb-3">
+                                    <div class="progress col-12" style="height: 5px;">
+                                      <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                  </div>
+                                  <div class="balance-card__body d-flex justify-content-between align-content-center">
+                                    <h5 class="balance-card-title text-black">
+                                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M0 9H10V10H0V9ZM1 5H2V8.5H1V5ZM3.5 5H4.5V8.5H3.5V5ZM5.5 5H6.5V8.5H5.5V5ZM8 5H9V8.5H8V5ZM0 2.5L5 0L10 2.5V4.5H0V2.5ZM1 3.118V3.5H9V3.118L5 1.118L1 3.118ZM5 3C4.86739 3 4.74021 2.94732 4.64645 2.85355C4.55268 2.75979 4.5 2.63261 4.5 2.5C4.5 2.36739 4.55268 2.24021 4.64645 2.14645C4.74021 2.05268 4.86739 2 5 2C5.13261 2 5.25979 2.05268 5.35355 2.14645C5.44732 2.24021 5.5 2.36739 5.5 2.5C5.5 2.63261 5.44732 2.75979 5.35355 2.85355C5.25979 2.94732 5.13261 3 5 3Z"
+                                          fill="#323232" />
+                                      </svg>
+                                      One time spend limit :
+                                    </h5>
+                                    <p class="balance-card__amount-sm text-black mb-0">₦0.00 / ₦1,000,000.00</p>
+                                  </div>
+                                </div>
+                                <div class="balance-card__border">
+                                  <div class="balance-card__header pb-3">
+                                    <div class="progress col-12" style="height: 5px;">
+                                      <div class="progress-bar" role="progressbar" style="width: 50%" aria-valuenow="25"
+                                        aria-valuemin="0" aria-valuemax="100"></div>
+                                    </div>
+                                  </div>
+                                  <div class="balance-card__body d-flex justify-content-between align-content-center">
+                                    <h5 class="balance-card-title text-black">
+                                      <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                          d="M0 9H10V10H0V9ZM1 5H2V8.5H1V5ZM3.5 5H4.5V8.5H3.5V5ZM5.5 5H6.5V8.5H5.5V5ZM8 5H9V8.5H8V5ZM0 2.5L5 0L10 2.5V4.5H0V2.5ZM1 3.118V3.5H9V3.118L5 1.118L1 3.118ZM5 3C4.86739 3 4.74021 2.94732 4.64645 2.85355C4.55268 2.75979 4.5 2.63261 4.5 2.5C4.5 2.36739 4.55268 2.24021 4.64645 2.14645C4.74021 2.05268 4.86739 2 5 2C5.13261 2 5.25979 2.05268 5.35355 2.14645C5.44732 2.24021 5.5 2.36739 5.5 2.5C5.5 2.63261 5.44732 2.75979 5.35355 2.85355C5.25979 2.94732 5.13261 3 5 3Z"
+                                          fill="#323232" />
+                                      </svg>
+                                      Daily Withdrawal Limit:
+                                    </h5>
+                                    <p class="balance-card__amount-sm text-black mb-0">₦0.00 / ₦2,000,000.00</p>
+                                  </div>
+                                </div>
+                                <div class="d-flex justify-content-center dropdown">
+                                  <button class="btn balance-card__dropdown dropdown-toggle" type="button"
+                                    id="balanceDropdown" data-bs-toggle="dropdown" aria-expanded="false">Learn about
+                                    limits</button>
+                                  <ul class="dropdown-menu" aria-labelledby="balanceDropdown">
+                                    <p>
+                                      A <span class="text-blue-3">One Time Spend Limit</span> is the
+                                      maximum amount you can withdraw or spend at a single transaction, which can be
+                                      repeated as long as you do not exceed the daily withdrawal limits.
+                                    </p>
+                                    <p>
+                                      A <span class="text-blue-3">Daily Withdrawal Limit</span> is the maximum amount of
+                                      money you can withdraw, in-app spending, transfer etc in a day( within 24hrs,
+                                      which is bound by number of transactions.
+
+                                    </p>
+                                  </ul>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row input-block">
+                          <hr class="dropdown-divider">
+                        </div>
+                        <div class="row input-block">
+                          <h4 class="form-header">Account Upgrade</h4>
+                          <div class="col-sm-8 col-12 form-floating">
+                            <ul class="upgrade-list">
+                              <li class="upgrade-item d-flex justify-content-between align-items-start">
+                                <div class="col">
+                                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="17" cy="17" r="17" fill="#1A8FDD" fill-opacity="0.3" />
+                                    <circle cx="17" cy="16.9999" r="11.8261" fill="#1A8FDD" />
+                                  </svg>
+                                </div>
+                                <div class="col-10">
+                                  <h5>
+                                    Level 1: Email Verification
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                      <circle cx="5" cy="5" r="5" fill="#07AF4A" />
+                                      <mask id="path-2-inside-1_257_90" fill="white">
+                                        <path
+                                          d="M4.58328 5.6613L6.49828 3.74609L6.79307 4.04068L4.58328 6.25047L3.25745 4.92464L3.55203 4.63005L4.58328 5.6613Z" />
+                                      </mask>
+                                      <path
+                                        d="M4.58328 5.6613L6.49828 3.74609L6.79307 4.04068L4.58328 6.25047L3.25745 4.92464L3.55203 4.63005L4.58328 5.6613Z"
+                                        fill="white" />
+                                      <path
+                                        d="M4.58328 5.6613L3.16907 7.07552L4.58336 8.48981L5.99757 7.07544L4.58328 5.6613ZM6.49828 3.74609L7.91199 2.33138L6.4977 0.918089L5.08399 2.33196L6.49828 3.74609ZM6.79307 4.04068L8.20728 5.45489L9.622 4.04018L8.20678 2.62596L6.79307 4.04068ZM4.58328 6.25047L3.16907 7.66468L4.58328 9.0789L5.99749 7.66468L4.58328 6.25047ZM3.25745 4.92464L1.84323 3.51042L0.42902 4.92464L1.84323 6.33885L3.25745 4.92464ZM3.55203 4.63005L4.96624 3.21584L3.55203 1.80162L2.13782 3.21584L3.55203 4.63005ZM5.99757 7.07544L7.91257 5.16023L5.08399 2.33196L3.16899 4.24717L5.99757 7.07544ZM5.08456 5.16081L5.37936 5.45539L8.20678 2.62596L7.91199 2.33138L5.08456 5.16081ZM5.37886 2.62646L3.16907 4.83626L5.99749 7.66468L8.20728 5.45489L5.37886 2.62646ZM5.99749 4.83626L4.67166 3.51042L1.84323 6.33885L3.16907 7.66468L5.99749 4.83626ZM4.67166 6.33885L4.96624 6.04427L2.13782 3.21584L1.84323 3.51042L4.67166 6.33885ZM2.13782 6.04427L3.16907 7.07552L5.99749 4.24709L4.96624 3.21584L2.13782 6.04427Z"
+                                        fill="white" mask="url(#path-2-inside-1_257_90)" />
+                                    </svg>
+                                  </h5>
+                                  <p>Your email Address has been verified. Your one-time and daily transaction limit is
+                                    N0.00</p>
+                                </div>
+                              </li>
+                              <li class="upgrade-item d-flex justify-content-between align-items-start">
+                                <div class="col">
+                                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="17" cy="17" r="17" fill="#1A8FDD" fill-opacity="0.3" />
+                                    <circle cx="17" cy="16.9999" r="11.8261" fill="#1A8FDD" />
+                                  </svg>
+                                </div>
+                                <div class="col-10">
+                                  <h5>
+                                    Level 2: BVN
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                      <circle cx="5" cy="5" r="5" fill="#07AF4A" />
+                                      <mask id="path-2-inside-1_257_90" fill="white">
+                                        <path
+                                          d="M4.58328 5.6613L6.49828 3.74609L6.79307 4.04068L4.58328 6.25047L3.25745 4.92464L3.55203 4.63005L4.58328 5.6613Z" />
+                                      </mask>
+                                      <path
+                                        d="M4.58328 5.6613L6.49828 3.74609L6.79307 4.04068L4.58328 6.25047L3.25745 4.92464L3.55203 4.63005L4.58328 5.6613Z"
+                                        fill="white" />
+                                      <path
+                                        d="M4.58328 5.6613L3.16907 7.07552L4.58336 8.48981L5.99757 7.07544L4.58328 5.6613ZM6.49828 3.74609L7.91199 2.33138L6.4977 0.918089L5.08399 2.33196L6.49828 3.74609ZM6.79307 4.04068L8.20728 5.45489L9.622 4.04018L8.20678 2.62596L6.79307 4.04068ZM4.58328 6.25047L3.16907 7.66468L4.58328 9.0789L5.99749 7.66468L4.58328 6.25047ZM3.25745 4.92464L1.84323 3.51042L0.42902 4.92464L1.84323 6.33885L3.25745 4.92464ZM3.55203 4.63005L4.96624 3.21584L3.55203 1.80162L2.13782 3.21584L3.55203 4.63005ZM5.99757 7.07544L7.91257 5.16023L5.08399 2.33196L3.16899 4.24717L5.99757 7.07544ZM5.08456 5.16081L5.37936 5.45539L8.20678 2.62596L7.91199 2.33138L5.08456 5.16081ZM5.37886 2.62646L3.16907 4.83626L5.99749 7.66468L8.20728 5.45489L5.37886 2.62646ZM5.99749 4.83626L4.67166 3.51042L1.84323 6.33885L3.16907 7.66468L5.99749 4.83626ZM4.67166 6.33885L4.96624 6.04427L2.13782 3.21584L1.84323 3.51042L4.67166 6.33885ZM2.13782 6.04427L3.16907 7.07552L5.99749 4.24709L4.96624 3.21584L2.13782 6.04427Z"
+                                        fill="white" mask="url(#path-2-inside-1_257_90)" />
+                                    </svg>
+                                  </h5>
+                                  <div class="d-flex justify-content-between">
+                                    <p>Your BVN has been verified. Your one time and daily Transaction limit is
+                                      N100,000.00
+                                      and N500,000.00
+                                      respectively.</p>
+                                    <button class="btn upgrade-btn">Submit</button>
+                                  </div>
+                                </div>
+                              </li>
+                              <li class="upgrade-item d-flex justify-content-between align-items-start">
+                                <div class="col">
+                                  <svg width="34" height="34" viewBox="0 0 34 34" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="17" cy="17" r="17" fill="#1A8FDD" fill-opacity="0.3" />
+                                    <circle cx="17" cy="16.9999" r="11.8261" fill="#1A8FDD" />
+                                  </svg>
+                                </div>
+                                <div class="col-10">
+                                  <h5>
+                                    Level 3: ID Verification
+                                    <svg width="10" height="10" viewBox="0 0 10 10" fill="none"
+                                      xmlns="http://www.w3.org/2000/svg">
+                                      <circle cx="5" cy="5" r="5" fill="#07AF4A" />
+                                      <mask id="path-2-inside-1_257_90" fill="white">
+                                        <path
+                                          d="M4.58328 5.6613L6.49828 3.74609L6.79307 4.04068L4.58328 6.25047L3.25745 4.92464L3.55203 4.63005L4.58328 5.6613Z" />
+                                      </mask>
+                                      <path
+                                        d="M4.58328 5.6613L6.49828 3.74609L6.79307 4.04068L4.58328 6.25047L3.25745 4.92464L3.55203 4.63005L4.58328 5.6613Z"
+                                        fill="white" />
+                                      <path
+                                        d="M4.58328 5.6613L3.16907 7.07552L4.58336 8.48981L5.99757 7.07544L4.58328 5.6613ZM6.49828 3.74609L7.91199 2.33138L6.4977 0.918089L5.08399 2.33196L6.49828 3.74609ZM6.79307 4.04068L8.20728 5.45489L9.622 4.04018L8.20678 2.62596L6.79307 4.04068ZM4.58328 6.25047L3.16907 7.66468L4.58328 9.0789L5.99749 7.66468L4.58328 6.25047ZM3.25745 4.92464L1.84323 3.51042L0.42902 4.92464L1.84323 6.33885L3.25745 4.92464ZM3.55203 4.63005L4.96624 3.21584L3.55203 1.80162L2.13782 3.21584L3.55203 4.63005ZM5.99757 7.07544L7.91257 5.16023L5.08399 2.33196L3.16899 4.24717L5.99757 7.07544ZM5.08456 5.16081L5.37936 5.45539L8.20678 2.62596L7.91199 2.33138L5.08456 5.16081ZM5.37886 2.62646L3.16907 4.83626L5.99749 7.66468L8.20728 5.45489L5.37886 2.62646ZM5.99749 4.83626L4.67166 3.51042L1.84323 6.33885L3.16907 7.66468L5.99749 4.83626ZM4.67166 6.33885L4.96624 6.04427L2.13782 3.21584L1.84323 3.51042L4.67166 6.33885ZM2.13782 6.04427L3.16907 7.07552L5.99749 4.24709L4.96624 3.21584L2.13782 6.04427Z"
+                                        fill="white" mask="url(#path-2-inside-1_257_90)" />
+                                    </svg>
+                                  </h5>
+                                  <p>Your ID has been verified. Your one time and daily transaction is N1000,000.00 and
+                                    N4,000,000.00
+                                    respectively.</p>
+                                </div>
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <!-- <div class="col-md-6 col-lg-5 col-12">
+                <div class="col-11">
+                  <div class="balance-card" style="background-image: url('images/footer-bg.jpg');">
+                    <div class="balance-card__header">
+                      <h5 class="balance-card-title">Total Balance</h5>
+                      <div class="balance-card-btn">
+                        <button class="btn bg-white"><span
+                            class="sidebar__nav-icon mdi mdi-arrow-bottom-left-thick"></span></button>
+                        <button class="btn border-light"><span
+                            class="sidebar__nav-icon mdi mdi-arrow-top-right-thick text-white"></span></button>
+                      </div>
+                    </div>
+                    <div class="balance-card__body">
+                      <p class="balance-card__amount">₦1,000,000,000</p>
+                    </div>
+                    <div class="balance-card__footer">
+                      <h6></h6>
+                      <p></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-11 mt-3">
+                  <div class="balance-card" style="background-image: url('images/backk.png');">
+                    <div class="balance-card__header">
+                      <h5 class="balance-card-title">Kuda Balance</h5>
+                      <div class="balance-card-btn">
+                        <button class="btn bg-white"><span
+                            class="sidebar__nav-icon mdi mdi-arrow-bottom-left-thick"></span></button>
+                        <button class="btn border-light"><span
+                            class="sidebar__nav-icon mdi mdi-arrow-top-right-thick text-white"></span></button>
+                      </div>
+                    </div>
+                    <div class="balance-card__body">
+                      <p class="balance-card__amount">$1,000,000,000</p>
+                    </div>
+                    <div class="balance-card__footer">
+                      <h6>Account No:</h6>
+                      <p>0123456789</p>
+                    </div>
+                  </div>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="col-md-3"></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+    integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+    integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+
+  <script src="js/main.js"></script>
+
+  <script>
+    $(document).ready(function () {
+
+      $('.responsive').slick({
+        dots: false,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 1,
+        arrows: true,
+        responsive: [
+          {
+            breakpoint: 1024,
+            settings: {
+              slidesToShow: 3,
+              slidesToScroll: 1,
+              infinite: true,
+              dots: false
+            }
+          },
+          {
+            breakpoint: 600,
+            settings: {
+              slidesToShow: 2,
+              slidesToScroll: 1
+            }
+          },
+          {
+            breakpoint: 480,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1
+            }
+          }
+          // You can unslick at a given breakpoint now by adding:
+          // settings: "unslick"
+          // instead of a settings object
+        ]
+      });
+    });
+  </script>
+</body>
+
+</html>
