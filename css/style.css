@@ -266,19 +266,34 @@ body {
   font-size: 18px;
 }
 
-.dashboard__header
-  .navbar-collapse
-  .navbar-nav
-  .nav-item.dropdown
-  .nav-link:not(:last-child)::after {
+a.dashboard__nav-link:not(:last-child)::after {
   display: none;
 }
 
-.dashboard__header
-  .navbar-collapse
-  .navbar-nav
-  .nav-item.dropdown
-  .nav-link:last-child:after {
+a.dashboard__nav-link span.badge {
+  font-size: 8.5px;
+}
+
+a.dashboard__nav-link.d-flex span {
+  font-weight: normal !important;
+  font-size: 12px;
+}
+
+a.dashboard__nav-link.d-flex::after {
+  display: block;
+  content: "";
+  width: 21px;
+  height: 21px;
+  background-color: rgba(196, 196, 196, 0.2);
+  background-image: url(../images/caret-down.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: unset;
+  border-radius: 3px;
+}
+
+.dashboard__header.navbar-collapse.navbar-nav
+  .nav-item.dashboard__nav-link.dropdown.d-flex:last-child::after {
   display: block;
   content: "";
   background-image: url(../images/caret-down.svg);
@@ -360,7 +375,13 @@ body {
   }
 
   .dashboard__heading {
-    font-size: 20px;
+    font-size: 17px;
+  }
+  .dashboard__header .navbar-collapse {
+    margin-right: 15px !important;
+  }
+  .dashboard__header .navbar-collapse .navbar-nav {
+    margin-left: auto !important;
   }
   .dashboard__header .navbar-collapse .navbar-nav .nav-item.dropdown .nav-link {
     border-right: unset !important;
@@ -1070,8 +1091,6 @@ div.balance-card__border:nth-child(2) > div:nth-child(1) {
 
 .ad-card {
   height: 300px;
-  padding: 25px;
-  border-radius: 30px;
 }
 
 .referral-card {
@@ -1268,7 +1287,7 @@ div.col-md-12:nth-child(1)
     display: none !important;
   }
   .ad-card {
-    height: 170px;
+    height: 130px;
   }
 }
 
