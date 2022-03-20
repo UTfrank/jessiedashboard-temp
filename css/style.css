@@ -248,11 +248,11 @@ body {
 }
 
 .dashboard__header {
+  display: flex;
   margin-bottom: 20px;
   padding: 15px 0;
   /* border-bottom: 1px solid #ccc; */
 }
-
 .dashboard__heading {
   font-style: normal;
   font-weight: bold;
@@ -339,6 +339,26 @@ body {
 }
 
 @media (max-width: 37.5em) {
+  .dashboard__header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 30;
+    /* background-color: #fff; */
+  }
+
+  .dashboard__header-bottom {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 81.5px;
+    background-color: rgba(249, 249, 249, 0.5);
+    border-color: rgba(249, 249, 249, 0.5);
+    filter: blur(6px);
+    z-index: 20;
+  }
+
   .dashboard__heading {
     font-size: 20px;
   }
@@ -354,6 +374,9 @@ body {
   }
   a.d-flex strong.ms-2 {
     margin-top: 5px;
+  }
+  .dashboard__header-bottom + div.row {
+    margin-top: 100px;
   }
 }
 
@@ -614,7 +637,7 @@ a:hover {
   border: unset;
   border-radius: 15px;
   /* box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03); */
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
 }
 #303030 #f9cf69 #dc5348 .card-link,
 .card-link:focus,
@@ -1153,6 +1176,45 @@ div.balance-card__border:nth-child(2) > div:nth-child(1) {
   border: 1px solid #323232;
   border-radius: 50%;
   background-color: #fff;
+}
+
+@media (max-width: 37.5em) {
+  .balance-card__header {
+    margin-bottom: 0;
+  }
+  div.balance-card__border:nth-child(1) > div:nth-child(2) > h5:nth-child(1),
+  div.balance-card__border:nth-child(1) > div:nth-child(2) > p:nth-child(2),
+  div.balance-card__border:nth-child(2) > div:nth-child(2) > h5:nth-child(1),
+  div.balance-card__border:nth-child(2) > div:nth-child(2) > p:nth-child(2) {
+    font-size: 10px;
+  }
+  .balance-card__dropdown + .dropdown-menu.show p {
+    font-size: 9px;
+    line-height: 13px;
+  }
+  .table > thead:nth-child(1) {
+    display: none;
+  }
+  .table > :not(:first-child) {
+    border-top: unset;
+  }
+  a.card-link:nth-child(2) > div:nth-child(1) {
+    display: none;
+  }
+  tbody,
+  td,
+  tfoot,
+  th,
+  thead,
+  tr,
+  tbody tr {
+    border: unset;
+    background-color: none !important;
+  }
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
 }
 
 .btn:focus,
