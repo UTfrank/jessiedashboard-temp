@@ -244,11 +244,11 @@
       <div class="container">
         <nav class="navbar navbar-expand navbar-light dashboard__header">
           <div class="container-fluid p-0">
-            <button class="btn sidebar__trigger">
+            <!-- <button class="btn sidebar__trigger">
               <svg width="18" height="16" viewBox="0 0 18 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M13 14V16H2V14H13ZM18 7V9H0V7H18ZM16 0V2H5V0H16Z" fill="black" />
               </svg>
-            </button>
+            </button> -->
             <div class="navbar-brand ">
               <h3 class=" dashboard__heading dashboard__heading-sm d-flex justify-content-between align-items-center">
                 <div class="mr-5">
@@ -349,46 +349,48 @@
                   <div class="tab-content trade-tabs-content" id="myTabContent">
                     <div class="tab-pane fade show active" id="buy" role="tabpanel" aria-labelledby="buy-tab">
                       <form class="coin-form col-12 mx-auto">
-                        <h5 class="form-header">Select Payment Method</h5>
+                        <h5 class="form-header coin-label text-black fw-bold">Select Payment Method</h5>
                         <!-- <p>Send PM to the wallet address displayed below and upload proof of payment.</p>  -->
                         <div class="row justify-content-between align-items-center m-0 mb-3">
-                          <div class="col-lg-4 col-md col-12 p-1 mb-1">
-                            <div class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2 active bg-blue-light">
+                          <div class="col-4 p-1 mb-1">
+                            <button
+                              class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2 active bg-blue-light">
                               <span class="check"><img src="images/green-tick-sm.svg" alt=""></span>
                               <img src="images/naira-circle.svg" alt="" class="me-2" width="20">
                               <span class="status">Naira Wallet</span>
-                            </div>
+                            </button>
                           </div>
-                          <div class="col-lg-4 col-md col-12 p-1 mb-1">
-                            <div class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
+                          <div class="col-4 p-1 mb-1">
+                            <button class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
                               <img src="images/btc.png" alt="" class="me-2" height="20">
                               <span class="status">BTC Wallet</span>
-                            </div>
+                            </button>
                           </div>
-                          <div class="col-lg-4 col-md col-12 p-1 mb-1">
-                            <div class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
+                          <div class="col-4 p-1 mb-1">
+                            <button class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
                               <img src="images/usdt.png" alt="" class="me-2" width="20">
                               <span class="status">USDT Wallet</span>
-                            </div>
+                            </button>
                           </div>
                         </div>
                         <div class="mb-3 input-container">
-                          <h5 class="form-header">Select Provider</h5>
+                          <h5 class="form-header coin-label text-black fw-bold">Select Provider</h5>
                           <div class="row align-items-center m-0 mb-3">
-                            <div class="col-lg-3 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2 active bg-blue-light">
+                            <div class="col-6 p-1 mb-1">
+                              <button
+                                class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2 active bg-blue-light">
                                 <img src="images/smile.png" alt="" class="me-2">
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-3 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
+                            <div class="col-6 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
                                 <img src="images/spectrnet.png" alt="" class="me-2">
-                              </div>
+                              </button>
                             </div>
                           </div>
                         </div>
                         <div class="mb-3 input-container">
-                          <h5 class="form-header">Enter Account ID</h5>
+                          <h5 class="form-header coin-label text-black fw-bold">Enter Account ID</h5>
                           <div class="col">
                             <div class="input-group">
                               <input type="text" class="form-control border-end-0" id="resetPassword"
@@ -401,67 +403,67 @@
                         </div>
 
                         <div class="mb-3 input-container">
-                          <h5 class="form-header">Select Plan</h5>
+                          <h5 class="form-header coin-label text-black fw-bold">Select Plan</h5>
                           <div class="row align-items-center m-0 mb-3">
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦300.00</span>
                                 <p class="mb-0 text-center fw-bold">1GB FlexiDaily</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦200.00</span>
                                 <p class="mb-0 text-center fw-bold">International SmileVoice ONLY 23</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦300.00</span>
                                 <p class="mb-0 text-center fw-bold">1GB FlexiDaily</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦200.00</span>
                                 <p class="mb-0 text-center fw-bold">International SmileVoice ONLY 23</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦300.00</span>
                                 <p class="mb-0 text-center fw-bold">1GB FlexiDaily</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦200.00</span>
                                 <p class="mb-0 text-center fw-bold">International SmileVoice ONLY 23</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦300.00</span>
                                 <p class="mb-0 text-center fw-bold">1GB FlexiDaily</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦200.00</span>
                                 <p class="mb-0 text-center fw-bold">International SmileVoice ONLY 23</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦300.00</span>
                                 <p class="mb-0 text-center fw-bold">1GB FlexiDaily</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦200.00</span>
                                 <p class="mb-0 text-center fw-bold">International SmileVoice ONLY 23</p>
-                              </div>
+                              </button>
                             </div>
                           </div>
                         </div>
@@ -475,60 +477,61 @@
                     </div>
                     <div class="tab-pane fade" id="sell" role="tabpanel" aria-labelledby="sell-tab">
                       <form class="coin-form col-12 mx-auto">
-                        <h5 class="form-header">Select Payment Method</h5>
+                        <h5 class="form-header coin-label text-black fw-bold">Select Payment Method</h5>
                         <!-- <p>Send PM to the wallet address displayed below and upload proof of payment.</p>  -->
                         <div class="row justify-content-between align-items-center m-0 mb-3">
-                          <div class="col-lg-4 col-md col-12 p-1 mb-1">
-                            <div class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2 active bg-blue-light">
+                          <div class="col-4 p-1 mb-1">
+                            <button
+                              class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2 active bg-blue-light">
                               <span class="check"><img src="images/green-tick-sm.svg" alt=""></span>
                               <img src="images/naira-circle.svg" alt="" class="me-2" width="20">
                               <span class="status">Naira Wallet</span>
-                            </div>
+                            </button>
                           </div>
-                          <div class="col-lg-4 col-md col-12 p-1 mb-1">
-                            <div class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
+                          <div class="col-4 p-1 mb-1">
+                            <button class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
                               <img src="images/btc.png" alt="" class="me-2" height="20">
                               <span class="status">BTC Wallet</span>
-                            </div>
+                            </button>
                           </div>
-                          <div class="col-lg-4 col-md col-12 p-1 mb-1">
-                            <div class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
+                          <div class="col-4 p-1 mb-1">
+                            <button class="coin-rate-btn d-flex align-items-center w-100 py-3 px-2">
                               <img src="images/usdt.png" alt="" class="me-2" width="20">
                               <span class="status">USDT Wallet</span>
-                            </div>
+                            </button>
                           </div>
                         </div>
                         <div class="mb-3 input-container">
-                          <h5 class="form-header">Select Provider</h5>
+                          <h5 class="form-header coin-label text-black fw-bold">Select Provider</h5>
                           <div class="row justify-content-between align-items-center m-0 mb-3">
-                            <div class="col-lg-3 col-md col-12 p-1 mb-1">
-                              <div
+                            <div class="col-lg-3 col-md-6 col-6 p-1 mb-1">
+                              <button
                                 class="coin-rate-btn d-flex align-items-center justify-content-center w-100 py-3 px-2 active bg-blue-light">
                                 <img src="images/dstv.png" alt="" class="me-2">
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-3 col-md col-12 p-1 mb-1">
-                              <div
+                            <div class="col-lg-3 col-md-6 col-6 p-1 mb-1">
+                              <button
                                 class="coin-rate-btn d-flex align-items-center justify-content-center w-100 py-3 px-2">
                                 <img src="images/gotv.png" alt="" class="me-2">
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-3 col-md col-12 p-1 mb-1">
-                              <div
+                            <div class="col-lg-3 col-md-6 col-6 p-1 mb-1">
+                              <button
                                 class="coin-rate-btn d-flex align-items-center justify-content-center w-100 py-3 px-2">
                                 <img src="images/star-times.png" alt="" class="me-2" height="20">
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-3 col-md col-12 p-1 mb-1">
-                              <div
+                            <div class="col-lg-3 col-md-6 col-6 p-1 mb-1">
+                              <button
                                 class="coin-rate-btn d-flex align-items-center justify-content-center w-100 py-3 px-2">
                                 <img src="images/showmax.png" alt="" class="me-2">
-                              </div>
+                              </button>
                             </div>
                           </div>
                         </div>
                         <div class="mb-3 input-container">
-                          <h5 class="form-header">Enter Smart Card Number</h5>
+                          <h5 class="form-header coin-label text-black fw-bold">Enter Smart Card Number</h5>
                           <div class="col">
                             <div class="input-group">
                               <input type="text" class="form-control border-end-0" id="resetPassword"
@@ -541,67 +544,67 @@
                         </div>
 
                         <div class="mb-3 input-container">
-                          <h5 class="form-header">Select amount</h5>
+                          <h5 class="form-header coin-label text-black fw-bold">Select amount</h5>
                           <div class="row align-items-center m-0 mb-3">
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
-                            <div class="col-lg-2 col-md col-12 p-1 mb-1">
-                              <div class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
+                            <div class="col-4 p-1 mb-1">
+                              <button class="coin-rate-btn d-flex flex-column align-items-center w-100 py-3 px-2">
                                 <span class="status small text-center fw-lighter">₦1,850.00</span>
                                 <p class="mb-0 text-center fw-bold">DStv Padi <br> N1,850</p>
-                              </div>
+                              </button>
                             </div>
                           </div>
                         </div>
